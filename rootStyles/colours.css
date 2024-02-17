@@ -1,0 +1,9 @@
+:root {
+    /* Background */
+    --baseDarkBackgroundColour: #010F17;
+    --baseBackgroundColour: #011B2A;
+
+    /* Text */
+    --baseTextColour: #A09D9A;
+    --baseHighlightingColour: #36D7FD;
+}

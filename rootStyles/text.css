@@ -1,0 +1,22 @@
+:root {
+    /* Font Details */
+    --baseFontFamily: 'Montserrat';
+    --baseLetterSpacing: -0.01em;
+
+    /* Font Weight */
+    --thinFont: 100;
+    --extraLightFont: 200;
+    --lightFont: 300;
+    --regularFont: 400;
+    --mediumFont: 500;
+    --semiBoldFont: 600;
+    --boldFont: 700;
+    --extraBoldFont: 800;
+    --blackFont: 900;
+
+    /* Font Style */
+    --italic: italic;
+    --normal: normal;
+    --oblique: oblique;
+
+}
