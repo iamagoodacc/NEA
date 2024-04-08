@@ -1,9 +1,14 @@
 :root {
-    /* Background */
-    --baseDarkBackgroundColour: #010F17;
-    --baseBackgroundColour: #011B2A;
+  /* Background */
+  --baseDarkBackgroundColour: #010f17;
+  --baseBackgroundColour: #011b2a;
 
-    /* Text */
-    --baseTextColour: #A09D9A;
-    --baseHighlightingColour: #36D7FD;
+  /* Special */
+  --positiveColour: #00b8b2;
+  --negativeColour: #ef7466;
+
+  /* Text */
+  --baseTextGray: #bdb8b3;
+  --baseTextColour: #b9d1fc;
+  --baseTextHighlightingColour: #36d7fd;
 }

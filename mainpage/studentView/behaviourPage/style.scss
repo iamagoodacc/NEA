@@ -2,14 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
-html {
-    font-size: 16px;
-}
-
-.timetablePage {
+.behaviourPage {
     width: 100vw;
     height: 100vh;
 
@@ -20,11 +16,11 @@ html {
 
     background: linear-gradient(180deg, var(--baseBackgroundColour) 0%, #1B2139 66.1%, #322745 100%);
     mix-blend-mode: normal;
-    
+
     .pageTitle {
-        //height: 43.75rem;
+        height: 43.75rem;
         min-width: 3.4375rem;
-        height: 95.89041096%;
+        //height: 95.89041096%;
     
         writing-mode: vertical-lr; /* Set vertical writing mode from left to right */
         transform: rotate(180deg); /* Rotate the text 180 degrees to make it upright */
@@ -39,7 +35,7 @@ html {
         color: var(--baseTextColour);
 
     }
-    
+
     .page {
         //width: 77.875rem;
         //height: 43.0625rem;
@@ -236,7 +232,7 @@ html {
     
                     writing-mode: vertical-lr;
                     transform: rotate(180deg);
-                }
+                }   
             }
 
             .timetable {
@@ -246,122 +242,7 @@ html {
                 height: 100%;
 
                 position: relative;
-
-                .timetableGrid {
-                    width: 98.30508475%;
-                    height: 96.70510708%;
-
-                    margin-left: 0.8620689655%;
-                    margin-top: 0.8620689655%;
-
-                    display: grid;
-                    position: relative;
-                    grid-column-gap: 0.8620689655%;
-                    grid-row-gap: 5.451448041%;
-
-                    grid-template-columns: repeat(5, 19.31034483%);
-                    grid-template-rows: repeat(5, 15.67291312%);
-
-                    .gridTemplate {
-                        background: var(--baseBackgroundColour);
-                        border-radius: 20px;
-
-                        //width: 18.98305085%;
-                        //height: 15.15650741%;
-                        width: 100%;
-                        height: 100%;
-
-                        //margin: 0.625rem;
-
-                        font-family: var(--baseFontFamily);
-                        font-style: var(--normal);
-                        font-weight: var(--semiBoldFont);
-                        font-size: 1.75vmin;
-                        line-height: 0.9375rem;
-                        letter-spacing: var(--baseLetterSpacing);
-
-
-                        color: var(--baseTextColour);
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-
-                        .title {
-                            width: 97.04910714%;
-                            height: 30.43478261%;
-
-                            margin-top: 2.950892857%;
-                            margin-left: 2.950892857%;
-
-                            display: flex;
-                            justify-content: flex-start;
-
-                            .subjectIcon {
-                                width: 10.64446387%;
-                                height: 100%;
-                                margin-right: 2.76001656%;
-                            }
-
-                            .subjectName {
-                                width: 86.69212015%;
-                                height: 89.28571429%;
-                                //margin-top: 10.71428571%;
-                                
-                                font-weight: var(--boldFont);
-                                font-size: 3vmin;
-                                line-height: 1.75rem;
-
-                                // overflow: hidden;
-                                // text-overflow: ellipsis;
-                                // word-wrap: break-word;
-                                // display: block;
-                                //line-height: 1em; /* a */
-                                //max-height: 2em; /* a x number of line to show (ex : 2 line)  */
-                            }
-                        }
-                        .teacherName {
-                            width: 92.62053571%;
-                            height: 19.56521739%;
-
-                            margin-top: 1.630434783%;
-                            margin-bottom: 1.630434783%;//1.086956522%;//4.347826087%;
-                            margin-left: 7.379464286%;
-
-                        }
-                        .subjectDetails {
-                            height: 19.56521739%;
-                            width: 88.83928571%;
-
-                            margin-left: 7.379464286%;
-
-                            display: flex;
-                            justify-content: flex-start;
-
-                            .classRoom {
-                                height: 100%;
-                                width: 33.66834171%;
-                            }
-
-                            .verticalBar {  
-                                width: 0.4170854271%;
-                                height: 100%;
-
-                                margin-right: 4.522613065%;
-
-                                background: var(--baseTextColour);
-                            }
-
-                            .classTime {
-                                height: 100%;
-                                width: 61.30653266%;
-
-                                color: var(--baseHighlightingColour);
-
-                            }
-                        }
-                    }       
-                }
             }
         }
-    }
+    } 
 }
