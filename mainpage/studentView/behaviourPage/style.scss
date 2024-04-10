@@ -133,16 +133,16 @@
             justify-content: space-between;
 
             height: 100%;
+            overflow-y: hidden;
 
             .recentBehaviourEvents {
                 width: 22.75rem;
+                height: 100%;
                 margin-right: 1.25rem;
 
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                position: relative;
-                size: inherit;
 
                 background: var(--baseDarkBackgroundColour);
                 border-radius: 25px;
@@ -182,15 +182,18 @@
                     margin-right: 0.6875rem;
 
                     width: 21.375rem;
-                    height: 100%;
+                    //display: block;
 
                     //background: var(--baseBackgroundColour);
 
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
 
-                    .positiveBehaviourEvent {
+                    //display: flex;
+                    //flex-direction: column;
+                    //justify-content: flex-start;
+
+                    .behaviourEvent {
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-start;
@@ -202,7 +205,7 @@
                         background: var(--baseBackgroundColour);
                         border-radius: 12px;
 
-                        .positiveBar {
+                        .bar {
                             margin-bottom: 5px;
                             margin-left: 16px;
                             margin-right: 16px;
@@ -376,10 +379,6 @@
                                     width: 12px;
                                     height: 8px;
                                 }
-                            }
-
-                            .expand {
-                                transform: rotateX(180deg);
                             }
                         }
                     }
