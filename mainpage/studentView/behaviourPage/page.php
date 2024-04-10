@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/NEA/reusableComponents/sidePanel.scss" />
 
     <link rel="stylesheet" href="style.scss" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -43,23 +44,107 @@
             </div>
             <div class="pageView">
                 <div class="recentBehaviourEvents">
-                    <div class="title">
-
+                    <div class="behaviourEventsTitle">
+                        Recent Events
                     </div>
-                    <div class="bar">
-
-                    </div>
+                    <div class="behaviourEventsBar"></div>
                     <div class="recentEvents">
-                        <template class="behaviourEvent"></template>
+                        <div class="positiveBehaviourEvent">
+                            <div class="positiveBar"></div>
+                            <div class="details">
+                                <div class="positiveBehaviourIcon">
+                                    <div class="outerCircle">
+                                        <div class="innerCircle">
+                                            <div class="text">+1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teacher">
+                                    MR JACKSON
+                                </div>
+                                <div class="dateTime">
+                                    <svg class="dateIcon" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 2.17647L2.22222 1M12 2.17647L10.7778 1M4.66667 6.29412L5.88889 7.47059L8.33333 5.11765M11.3889 6.29412C11.3889 8.89312 9.20007 11 6.5 11C3.79994 11 1.61111 8.89312 1.61111 6.29412C1.61111 3.69513 3.79994 1.58824 6.5 1.58824C9.20007 1.58824 11.3889 3.69513 11.3889 6.29412Z" stroke="#B9D1FC" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <div class="date">
+                                        14th February 2024
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum tincidunt libero, at fringilla lorem commodo sit amet. Etiam maximus felis sem, sit amet dapibus urna molestie nec. Aenean sed fringilla metus. Morbi in leo ornare, scelerisque mauris ac, maximus ligula. Nunc tincidunt leo ac lorem elementum, vel porta risus viverra. Phasellus tincidunt at eros sed porttitor. Suspendisse consectetur sit amet sapien eget aliquam.
+                                </div>
+                                <div class="dropDownIcon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="dropDownSVG" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70711 7.02651C6.31661 7.43561 5.68341 7.43561 5.29291 7.02651L0.292891 1.78841C-0.0976302 1.37928 -0.0976302 0.715966 0.292891 0.306838C0.683421 -0.102279 1.31658 -0.102279 1.70711 0.306838L6.00001 4.80419L10.2929 0.306838C10.6834 -0.102279 11.3166 -0.102279 11.7071 0.306838C12.0976 0.715966 12.0976 1.37928 11.7071 1.78841L6.70711 7.02651Z" fill="#36D7FD" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="positiveBehaviourEvent">
+                            <div class="positiveBar"></div>
+                            <div class="details">
+                                <div class="positiveBehaviourIcon">
+                                    <div class="outerCircle">
+                                        <div class="innerCircle">
+                                            <div class="text">+1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teacher">
+                                    MR JACKSON
+                                </div>
+                                <div class="dateTime">
+                                    <svg class="dateIcon" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 2.17647L2.22222 1M12 2.17647L10.7778 1M4.66667 6.29412L5.88889 7.47059L8.33333 5.11765M11.3889 6.29412C11.3889 8.89312 9.20007 11 6.5 11C3.79994 11 1.61111 8.89312 1.61111 6.29412C1.61111 3.69513 3.79994 1.58824 6.5 1.58824C9.20007 1.58824 11.3889 3.69513 11.3889 6.29412Z" stroke="#B9D1FC" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <div class="date">
+                                        14th February 2024
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="expandedText">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum tincidunt libero, at fringilla lorem commodo sit amet. Etiam maximus felis sem, sit amet dapibus urna molestie nec. Aenean sed fringilla metus. Morbi in leo ornare, scelerisque mauris ac, maximus ligula. Nunc tincidunt leo ac lorem elementum, vel porta risus viverra. Phasellus tincidunt at eros sed porttitor. Suspendisse consectetur sit amet sapien eget aliquam.
+                                </div>
+                                <div class="dropDownIcon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="dropDownSVG" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70711 7.02651C6.31661 7.43561 5.68341 7.43561 5.29291 7.02651L0.292891 1.78841C-0.0976302 1.37928 -0.0976302 0.715966 0.292891 0.306838C0.683421 -0.102279 1.31658 -0.102279 1.70711 0.306838L6.00001 4.80419L10.2929 0.306838C10.6834 -0.102279 11.3166 -0.102279 11.7071 0.306838C12.0976 0.715966 12.0976 1.37928 11.7071 1.78841L6.70711 7.02651Z" fill="#36D7FD" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <template class="negativeBehaviourEvent">
+                            <div class="details">
+                                <div class="dateTime">
+
+                                </div>
+                                <div class="negativeBehaviourIcon">
+
+                                </div>
+                                <div class="teacher">
+
+                                </div>
+                            </div>
+                            <div class="description">
+                                <div class="dropDownIcon">
+
+                                </div>
+                                <div class="text">
+
+                                </div>
+                            </div>
+                        </template>
                     </div>
                 </div>
-                <div class="behaviourLineGraph">
-
-                </div>
-                <div class="behaviourChartGraph">
+                <div class="graphs">
 
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="script.js"></script>

@@ -1,3 +1,2 @@
 <?php
-include('authCheck.php'); //auth token check
-?>
+include('authCheck.php');

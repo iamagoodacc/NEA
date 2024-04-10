@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>LINE COUNTER</title>
 </head>
+
 <body>
     <h2>LINE COUNTER</h2>
-    <form method="POST">        
+    <form method="POST">
         <label for="extensions">File extensions:</label>
         <input type="text" name="extensions" id="extensions">
         <br>
@@ -15,9 +17,10 @@
         <button type="submit">Count Lines</button>
     </form>
 </body>
+
 </html>
 
-<?php   
+<?php
 /**
  * Count the total lines of code in all descendant files within a given directory,
  * for specified file extensions.
@@ -27,7 +30,8 @@
  *                           Example: 'php,js,html'
  * @return int The total number of lines of code found in all descendant files.
  */
-function countLinesOfCode($directory, $extensions) {
+function countLinesOfCode($directory, $extensions)
+{
     $totalLines = 0;
     $extensions = explode(',', $extensions);
 
@@ -37,7 +41,6 @@ function countLinesOfCode($directory, $extensions) {
         foreach ($files as $file) {
             if ($file === '.' || $file === '..') { //useless back and forth folders
                 continue;
-                
             }
 
             $filePath = $dir . DIRECTORY_SEPARATOR . $file;

@@ -1,13 +1,15 @@
 <?php
 
-class Database {
+class Database
+{
     private $server = "localhost";
     private $username = "testUser";
     private $password = "j2(%NJFF@a2mBxv";
     private $database = "database";
     private $connection;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->connection = mysqli_connect($this->server, $this->username, $this->password, $this->database);
     }
 
@@ -22,7 +24,8 @@ class Database {
      * @return array An array containing the fetched results, or an empty array if no results are returned.
      */
 
-    public function query($sql, $params = []) {
+    public function query($sql, $params = [])
+    {
         $statement = $this->connection->prepare($sql);
 
         if (!$statement) {
@@ -42,7 +45,7 @@ class Database {
             $statement->bind_param($types, ...$values);
         }
 
-        $statement->execute(); 
+        $statement->execute();
         $result = $statement->get_result();
         $data = $result->fetch_all(MYSQLI_ASSOC);
         $statement->close();
@@ -51,7 +54,8 @@ class Database {
         return $result;
     }
 
-    public function getUserIdfromToken($token) {
+    public function getUserIdfromToken($token)
+    {
         $params = [
             ['value' => $token, 'type' => 's'],
         ];
@@ -65,7 +69,8 @@ class Database {
         return $result;
     }
 
-    public function getAccessLevel($userId) {
+    public function getAccessLevel($userId)
+    {
         $params = [
             ['value' => $userId, 'type' => 's'],
         ];
@@ -77,10 +82,10 @@ class Database {
         $result = $this->query($sql, $params);
 
         return $result;
-
     }
 
-    public function getUserEmail($userId) {
+    public function getUserEmail($userId)
+    {
         $params = [
             ['value' => $userId, 'type' => 's'],
         ];
@@ -94,7 +99,8 @@ class Database {
         return $result;
     }
 
-    public function getUserName($userId) {
+    public function getUserName($userId)
+    {
         $params = [
             ['value' => $userId, 'type' => 's'],
         ];
@@ -108,7 +114,8 @@ class Database {
         return $result;
     }
 
-    public function getUserLast_Login($userId) {
+    public function getUserLast_Login($userId)
+    {
         $params = [
             ['value' => $userId, 'type' => 's'],
         ];
@@ -122,7 +129,8 @@ class Database {
         return $result;
     }
 
-    public function getUserCreationDate($userId) {
+    public function getUserCreationDate($userId)
+    {
         $params = [
             ['value' => $userId, 'type' => 's'],
         ];
@@ -136,7 +144,8 @@ class Database {
         return $result;
     }
 
-    public function getUserProfilePicture($userId) {
+    public function getUserProfilePicture($userId)
+    {
         $params = [
             ['value' => $userId, 'type' => 's'],
         ];
@@ -150,5 +159,3 @@ class Database {
         return $result;
     }
 }
-
-?>
