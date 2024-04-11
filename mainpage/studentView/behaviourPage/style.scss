@@ -5,6 +5,24 @@
     //overflow: hidden;
 }
 
+*::-webkit-scrollbar {
+    width: 2.4px;
+    background-color: var(--baseTextColour);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--baseTextColour);
+
+    border-radius: 50px;
+    border-left: 1px solid var(--baseDarkBackgroundColour);
+    border-right: 1px solid var(--baseDarkBackgroundColour);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--baseTextColour);
+    border-radius: 50px;
+}
+
 .behaviourPage {
     width: 100vw;
     height: 100vh;
@@ -182,16 +200,13 @@
                     margin-right: 0.6875rem;
 
                     width: 21.375rem;
-                    //display: block;
-
-                    //background: var(--baseBackgroundColour);
 
                     overflow-x: hidden;
                     overflow-y: scroll;
 
-                    //display: flex;
-                    //flex-direction: column;
-                    //justify-content: flex-start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
 
                     .behaviourEvent {
                         display: flex;
