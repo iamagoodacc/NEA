@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html {
+    font-size: 16px;
+}
+
+.timetablePage {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+
+    background: linear-gradient(180deg, var(--baseBackgroundColour) 0%, #1b2139 66.1%, #322745 100%);
+    mix-blend-mode: normal;
+
+    .pageTitle {
+        //height: 43.75rem;
+        min-width: 3.4375rem;
+        height: 95.89041096%;
+
+        writing-mode: vertical-lr; /* Set vertical writing mode from left to right */
+        transform: rotate(180deg); /* Rotate the text 180 degrees to make it upright */
+
+        font-family: var(--baseFontFamily);
+        font-style: var(--normal);
+        font-weight: var(--semiBoldFont);
+        font-size: 1.4375rem;
+        line-height: 3.4375rem;
+        text-align: center;
+        letter-spacing: var(--baseLetterSpacing);
+        color: var(--baseTextColour);
+    }
+
+    .page {
+        //width: 77.875rem;
+        //height: 43.0625rem;
+        width: 81.11979167%;
+        height: 94.38356164%;
+
+        //margin-top: 1.625rem;
+        margin-top: 3.561643836%;
+        margin-bottom: 3.561643836%;
+        margin-right: 0.9375rem;
+
+        position: relative;
+        overflow: visible;
+
+        .topBar {
+            // width: 76.5625rem;
+            //min-height: 2.625rem;
+            height: 6.095791001%;
+            width: 100%;
+
+            margin-bottom: 2.5rem;
+
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+
+            .message {
+                //width: 44.25rem;
+                //height: 2.4375rem;
+                width: 57.79591837%;
+                height: 92.85714286%;
+
+                font-size: 3vmin;
+
+                margin-top: 0.1875rem;
+
+                font-family: var(--baseFontFamily);
+                font-style: var(--normal);
+                font-weight: var(--boldFont);
+                //font-size: 1.4375vw;
+                //font-size: 3.2vh;
+                line-height: 1.75rem;
+                letter-spacing: var(--baseLetterSpacing);
+
+                color: var(--baseTextColour);
+            }
+
+            .options {
+                position: relative;
+                min-width: 5.625rem;
+                //height: 2.375rem;
+                height: 90.47619048%;
+                //min-width: 8%;
+
+                .settingsIcon {
+                    //width: 2.3125rem;
+                    //height: 2.3125rem;
+                    width: 41.11111111111%;
+                    height: 97.36842105%;
+
+                    margin-right: 11.1111111%;
+
+                    transition: transform 0.3s ease;
+                    z-index: 2;
+                }
+                .signoutIcon {
+                    //width: 2.375rem;
+                    //height: 2.375rem;
+                    width: 42.22222222222%;
+                    height: 100%;
+
+                    transition: transform 0.3s ease;
+                    z-index: 2;
+                }
+
+                .signoutIcon:hover {
+                    transform: rotateY(180deg);
+                }
+
+                .settingsIcon:hover {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .pageView {
+            //width: 77.875rem;
+            width: 100%;
+            //height: 37.9375rem;
+            height: 88.09869376%;
+
+            margin-top: 0.9375rem;
+            margin-bottom: 0.9375rem;
+
+            position: relative;
+            display: flex;
+            justify-self: flex-end;
+            justify-content: flex-start;
+
+            .timetableDates {
+                //width: 3.5rem;
+                //height: 37.9375rem;
+                width: 4.494382022%;
+                height: 100%;
+                margin-right: 0.625rem;
+
+                font-family: var(--baseFontFamily);
+                font-style: var(--normal);
+                font-weight: var(--semiBoldFont);
+                //font-size: 1.125vw;
+                font-size: 2.4vmin;
+                line-height: 200%;
+                letter-spacing: var(--baseLetterSpacing);
+                color: var(--baseTextColour);
+
+                position: relative;
+
+                background: var(--baseDarkBackgroundColour);
+                border-radius: 25px;
+
+                display: flex;
+                //text-align: center;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+
+                .Monday {
+                    //position: absolute;
+                    // height: 5.1875rem;
+                    //width: 1.8125rem;
+                    //margin-left: 0.8125rem;
+
+                    width: 51.78571429%;
+                    margin-left: 23.21428571%;
+                    margin-bottom: 1.25rem;
+
+                    // left: 0.8125rem;
+                    // top: 31.65rem;
+
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                }
+
+                .Tuesday {
+                    //position: absolute;
+                    // height: 7.875rem;
+
+                    width: 51.78571429%;
+                    margin-left: 23.21428571%;
+
+                    //left: 0.8125rem;
+                    //top: 22.1875rem;
+
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                }
+
+                .Wednesday {
+                    //position: absolute;
+                    // height: 7.875rem;
+                    width: 51.78571429%;
+                    margin-left: 23.21428571%;
+
+                    //left: 0.8125rem;
+                    //top: 14.5rem;
+
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                }
+
+                .Thursday {
+                    //position: absolute;
+                    // height: 7.875rem;
+                    width: 51.78571429%;
+                    margin-left: 23.21428571%;
+
+                    //left: 0.8125rem;
+                    //top: 5.0625rem;
+
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                }
+
+                .Friday {
+                    //position: absolute;
+                    // height: 4.0625rem;
+                    width: 51.78571429%;
+                    margin-left: 23.21428571%;
+                    margin-top: 1.25rem;
+
+                    //left: 0.8125rem;
+                    //top: 1.25rem;
+
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                }
+            }
+
+            .timetable {
+                background: var(--baseDarkBackgroundColour);
+                border-radius: 26px;
+                width: 100%;
+                height: 100%;
+
+                position: relative;
+
+                .timetableGrid {
+                    width: 98.30508475%;
+                    height: 96.70510708%;
+
+                    margin-left: 0.8620689655%;
+                    margin-top: 0.8620689655%;
+
+                    display: grid;
+                    position: relative;
+                    grid-column-gap: 0.8620689655%;
+                    grid-row-gap: 5.451448041%;
+
+                    grid-template-columns: repeat(5, 19.31034483%);
+                    grid-template-rows: repeat(5, 15.67291312%);
+
+                    .gridTemplate {
+                        background: var(--baseBackgroundColour);
+                        border-radius: 20px;
+
+                        //width: 18.98305085%;
+                        //height: 15.15650741%;
+                        width: 100%;
+                        height: 100%;
+
+                        //margin: 0.625rem;
+
+                        font-family: var(--baseFontFamily);
+                        font-style: var(--normal);
+                        font-weight: var(--semiBoldFont);
+                        font-size: 1.75vmin;
+                        line-height: 0.9375rem;
+                        letter-spacing: var(--baseLetterSpacing);
+
+                        color: var(--baseTextColour);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+
+                        .title {
+                            width: 97.04910714%;
+                            height: 30.43478261%;
+
+                            margin-top: 2.950892857%;
+                            margin-left: 2.950892857%;
+
+                            display: flex;
+                            justify-content: flex-start;
+
+                            .subjectIcon {
+                                width: 10.64446387%;
+                                height: 100%;
+                                margin-right: 2.76001656%;
+                            }
+
+                            .subjectName {
+                                width: 86.69212015%;
+                                height: 89.28571429%;
+                                //margin-top: 10.71428571%;
+
+                                font-weight: var(--boldFont);
+                                font-size: 3vmin;
+                                line-height: 1.75rem;
+
+                                // overflow: hidden;
+                                // text-overflow: ellipsis;
+                                // word-wrap: break-word;
+                                // display: block;
+                                //line-height: 1em; /* a */
+                                //max-height: 2em; /* a x number of line to show (ex : 2 line)  */
+                            }
+                        }
+                        .teacherName {
+                            width: 92.62053571%;
+                            height: 19.56521739%;
+
+                            margin-top: 1.630434783%;
+                            margin-bottom: 1.630434783%; //1.086956522%;//4.347826087%;
+                            margin-left: 7.379464286%;
+                        }
+                        .subjectDetails {
+                            height: 19.56521739%;
+                            width: 88.83928571%;
+
+                            margin-left: 7.379464286%;
+
+                            display: flex;
+                            justify-content: flex-start;
+
+                            .classRoom {
+                                height: 100%;
+                                width: 33.66834171%;
+                            }
+
+                            .verticalBar {
+                                width: 0.4170854271%;
+                                height: 100%;
+
+                                margin-right: 4.522613065%;
+
+                                background: var(--baseTextColour);
+                            }
+
+                            .classTime {
+                                height: 100%;
+                                width: 61.30653266%;
+
+                                color: var(--baseHighlightingColour);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

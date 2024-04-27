@@ -9,15 +9,17 @@
 
     <link rel="stylesheet" href="/NEA/rootStyles/colours.css" />
     <link rel="stylesheet" href="/NEA/rootStyles/text.css" />
-    <link rel="stylesheet" href="/NEA/reusableComponents/sidePanel.scss" />
+    <link rel="stylesheet" href="/NEA/reusableComponents/sidePanel/sidePanel.scss" />
 
     <link rel="stylesheet" href="style.scss" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script> -->
 </head>
 
 <body>
     <div class="behaviourPage">
-        <?php include_once "../../../reusableComponents/sidePanel.php" ?>
+        <?php include_once "../../../reusableComponents/sidePanel/sidePanel.php" ?>
 
         <div class="pageTitle">
             Behaviour
@@ -26,7 +28,7 @@
         <div class="page">
             <div class="topBar">
                 <div class="message">
-                    Ready to reflect on your behaviour? Let's see how you're doing.
+                    Ready to reflect on your behaviour? Let's see how you're doing!
                 </div>
 
                 <div class="options">
@@ -86,10 +88,20 @@
                     </div>
                 </div>
                 <div class="graphs">
+                    <div class="behaviourLineGraph">
+                        <canvas class="lineGraphCanvas">
 
+                        </canvas>
+                    </div>
+                    <div class="behaviourChartGraph">
+                        <canvas class="chartGraphCanvas">
+
+                        </canvas>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="../../../reusableComponents/sidePanel/sidePanel.js"></script>
 <script src="script.js"></script>
