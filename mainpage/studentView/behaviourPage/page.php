@@ -56,9 +56,7 @@
                             <div class="details">
                                 <div class="positiveBehaviourIcon">
                                     <div class="outerCircle">
-                                        <div class="innerCircle">
-                                            <div class="text">+1</div>
-                                        </div>
+                                        <div class="text">+1</div>
                                     </div>
                                 </div>
                                 <div class="teacher">

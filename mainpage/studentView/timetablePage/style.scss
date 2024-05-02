@@ -17,6 +17,12 @@
     background: linear-gradient(180deg, var(--baseBackgroundColour) 0%, #1b2139 66.1%, #322745 100%);
     mix-blend-mode: normal;
 
+    .menu {
+        .selectionBox {
+            top: 278.75px;
+        }
+    }
+
     .pageTitle {
         //height: 43.75rem;
         min-width: 3.4375rem;
@@ -64,8 +70,6 @@
                 //width: clamp(760px, 50%, 1118px);
                 //font-size: 3vmin;
                 font-size: 23px;
-
-                margin-top: 0.1875rem;
 
                 font-family: var(--baseFontFamily);
                 font-style: var(--normal);

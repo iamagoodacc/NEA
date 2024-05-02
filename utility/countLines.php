@@ -62,8 +62,8 @@ function countLinesOfCode($directory, $extensions)
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $extensions = !empty($_POST['extensions']) ? $_POST['folderPath'] : "php,js,html,css";
-    $folderPath = !empty($_POST['folderPath']) ? $_POST['folderPath'] : "C:/Web Development/NEA";
+    $extensions = !empty($_POST['extensions']) ? $_POST['folderPath'] : "php,js,html,css,scss";
+    $folderPath = !empty($_POST['folderPath']) ? $_POST['folderPath'] : "C:/web-development/NEA";
 
     $totalLines = countLinesOfCode($folderPath, $extensions);
     echo "<p>TOTAL LINES OF CODE: $totalLines</p>";

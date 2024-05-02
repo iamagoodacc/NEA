@@ -77,8 +77,6 @@
                 //font-size: 3vmin;
                 font-size: 23px;
 
-                margin-top: 0.1875rem;
-
                 font-family: var(--baseFontFamily);
                 font-style: var(--normal);
                 font-weight: var(--boldFont);
@@ -258,37 +256,30 @@
                                     height: 19px;
 
                                     border-radius: 50%;
-                                    position: relative;
-                                    background: var(--positiveColour);
+                                    background: transparent;
 
-                                    .innerCircle {
-                                        position: absolute;
-                                        width: 14px;
-                                        height: 14px;
-                                        top: 2.5px;
-                                        left: 2.5px;
+                                    border: solid 2.5px var(--positiveColour);
 
-                                        border-radius: 50%;
+                                    border-radius: 50%;
 
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        background: var(--baseDarkBackgroundColour);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
 
-                                        .text {
-                                            width: 12px;
-                                            height: 15px;
+                                    .text {
+                                        margin-top: 1px;
+                                        width: 12px;
+                                        height: 15px;
 
-                                            font-family: var(--baseFontFamily);
-                                            font-style: var(--normal);
-                                            font-weight: var(--boldFont);
-                                            letter-spacing: var(--baseLetterSpacing);
+                                        font-family: var(--baseFontFamily);
+                                        font-style: var(--normal);
+                                        font-weight: var(--boldFont);
+                                        letter-spacing: var(--baseLetterSpacing);
 
-                                            font-size: 12px;
-                                            line-height: 15px;
+                                        font-size: 12px;
+                                        line-height: 15px;
 
-                                            color: var(--positiveColour);
-                                        }
+                                        color: var(--positiveColour);
                                     }
                                 }
                             }
