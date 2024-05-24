@@ -1,20 +1,20 @@
-var assignmentTemplate = document.getElementById("assignmentTemplate")
-var dueAssignments = assignmentTemplate.parentElement
+const assignmentTemplate = document.getElementById("assignmentTemplate")
+const dueAssignments = assignmentTemplate.parentElement
 
 for (i=0; i < 15; i++) {
-    var newAssignmentContents = document.importNode(assignmentTemplate.content, true);
-    var newAssignment = document.createElement("div")
+    const newAssignmentContents = document.importNode(assignmentTemplate.content, true);
+    const newAssignment = document.createElement("div")
     newAssignment.appendChild(newAssignmentContents)
     newAssignment.classList.add("assignment")
     dueAssignments.appendChild(newAssignment);
 }
 
-var noticeTemplate = document.getElementById("noticeTemplate")
-var recentNotices = noticeTemplate.parentElement
+const noticeTemplate = document.getElementById("noticeTemplate")
+const recentNotices = noticeTemplate.parentElement
 
 for (i=0; i < 5; i++) {
-    var newNoticeContents = document.importNode(noticeTemplate.content, true);
-    var newNotice = document.createElement("div")
+    const newNoticeContents = document.importNode(noticeTemplate.content, true);
+    const newNotice = document.createElement("div")
     newNotice.appendChild(newNoticeContents)
     newNotice.classList.add("notice")
     recentNotices.appendChild(newNotice);
@@ -24,7 +24,7 @@ var data = 80 //need to round it cus santosh has attendance of 99.99999%
 data = [data, 100-data]
 $('.attendanceValue').html(`${data[0]}%`)
 
-var ringCTX = document.querySelector(".attendanceChart").getContext('2d');
+const ringCTX = document.querySelector(".attendanceChart").getContext('2d');
 
 var ringChart = new Chart(ringCTX, {
     type: 'doughnut',

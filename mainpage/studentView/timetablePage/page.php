@@ -5,7 +5,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
-        <link rel="stylesheet" href="globals.css" />
 
         <link rel="stylesheet" href="/NEA/rootStyles/colours.css" />
         <link rel="stylesheet" href="/NEA/rootStyles/text.css" />
@@ -52,7 +51,7 @@
 
                     <div class="timetable">
                         <div class="timetableGrid">
-                            <template class="">
+                            <template>
                                 <div class="title">
                                     <svg class="subjectIcon" width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3.50339 9.33333H20.8613C21.4399 9.33333 21.8257 8.86667 21.8257 8.16667C21.8257 7.46667 21.4399 7 20.8613 7H3.50339C2.92479 7 2.53906 7.46667 2.53906 8.16667C2.53906 8.86667 2.92479 9.33333 3.50339 9.33333ZM13.1467 18.6667H3.50339C2.92479 18.6667 2.53906 19.1333 2.53906 19.8333C2.53906 20.5333 2.92479 21 3.50339 21H13.1467C13.7253 21 14.111 20.5333 14.111 19.8333C14.111 19.1333 13.7253 18.6667 13.1467 18.6667ZM20.8613 12.8333H3.50339C2.92479 12.8333 2.53906 13.3 2.53906 14C2.53906 14.7 2.92479 15.1667 3.50339 15.1667H20.8613C21.4399 15.1667 21.8257 14.7 21.8257 14C21.8257 13.3 21.4399 12.8333 20.8613 12.8333Z" fill="#A09D9A" stroke="#011B2A" stroke-width="0.5" />

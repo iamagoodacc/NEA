@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="globals.css" />
 
     <link rel="stylesheet" href="/NEA/rootStyles/colours.css" />
     <link rel="stylesheet" href="/NEA/rootStyles/text.css" />
@@ -183,7 +182,7 @@
                             <div class="horizontalBar"></div>
                         </div>
                         <div class="notices">
-                            <template id="noticeTemplate" class="notice">
+                            <template id="noticeTemplate">
                                 <div class="heading">
                                     <div class="noticeTitle">ANNOUNCEMENT!</div>
                                     <div class="noticeDate">14th February 2024</div>

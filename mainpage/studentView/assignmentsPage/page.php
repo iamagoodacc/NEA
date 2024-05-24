@@ -17,17 +17,17 @@
 </head>
 
 <body>
-    <div class="behaviourPage">
+    <div class="assignmentsPage">
         <?php include_once "../../../reusableComponents/sidePanel/sidePanel.php" ?>
 
         <div class="pageTitle">
-            Behaviour
+            Assignments
         </div>
 
         <div class="page">
             <div class="topBar">
                 <div class="message">
-                    Ready to reflect on your behaviour? Let's see how you're doing!
+                    Amplify your academics: Let's unveil your assignment agenda!
                 </div>
 
                 <div class="options">
@@ -44,56 +44,52 @@
                 </div>
             </div>
             <div class="pageView">
-                <div class="recentBehaviourEvents">
-                    <div class="behaviourEventsTitle">
-                        Recent Events
+                <div class="assignmentsView">
+                    <div class="headings">
+                        <div class="titles">
+                            <div class="leftTitles">
+                                <div class="dueTitle">Due</div>
+                                <div class="subjectTitle">Subject</div>
+                                <div class="taskTitle">Task</div>
+                            </div>
+                            <div class="rightTitles">
+                                <div class="setTitle">Set</div>
+                                <div class="completedTitle">Completed</div>
+                            </div>
+                        </div>
+                        <div class="horizontalBar"></div>
                     </div>
-                    <div class="behaviourEventsBar"></div>
-                    <div class="recentEvents">
-                        <template id="behaviourEventTemplate">
-                            <div class="bar"></div>
-                            <div class="details">
-                                <div class="positiveBehaviourIcon">
-                                    <div class="outerCircle">
-                                        <div class="text">+1</div>
-                                    </div>
+                    <div class="assignments">
+                        <template id="assignmentTemplate">
+                            <div class="leftDetails">
+                                <div class="dueDetails">1 July 2024</div>
+                                <div class="subjectDetails">
+                                    <div class="subjectName">Maths</div>
+                                    <div class="subjectClass">Ma.1</div>
                                 </div>
-                                <div class="teacher">
-                                    MR JACKSON
-                                </div>
-                                <div class="dateTime">
-                                    <svg class="dateIcon" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 2.17647L2.22222 1M12 2.17647L10.7778 1M4.66667 6.29412L5.88889 7.47059L8.33333 5.11765M11.3889 6.29412C11.3889 8.89312 9.20007 11 6.5 11C3.79994 11 1.61111 8.89312 1.61111 6.29412C1.61111 3.69513 3.79994 1.58824 6.5 1.58824C9.20007 1.58824 11.3889 3.69513 11.3889 6.29412Z" stroke="#B9D1FC" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                    <div class="date">
-                                        14th February 2024
-                                    </div>
+                                <div class="taskDetails">
+                                    <div class="taskLink">Complete Worksheet</div>
                                 </div>
                             </div>
-                            <div class="description">
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent condimentum tincidunt libero, at fringilla lorem commodo sit amet. Etiam maximus felis sem, sit amet dapibus urna molestie nec. Aenean sed fringilla metus. Morbi in leo ornare, scelerisque mauris ac, maximus ligula. Nunc tincidunt leo ac lorem elementum, vel porta risus viverra. Phasellus tincidunt at eros sed porttitor. Suspendisse consectetur sit amet sapien eget aliquam.
+                            <div class="rightDetails">
+                                <div class="setDetails">
+                                    <div class="setDate">30 June 2024</div>
+                                    <div class="setTeacher">Mrs Johnson</div>
                                 </div>
-                                <div class="dropDownIcon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <svg class="dropDownSVG" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70711 7.02651C6.31661 7.43561 5.68341 7.43561 5.29291 7.02651L0.292891 1.78841C-0.0976302 1.37928 -0.0976302 0.715966 0.292891 0.306838C0.683421 -0.102279 1.31658 -0.102279 1.70711 0.306838L6.00001 4.80419L10.2929 0.306838C10.6834 -0.102279 11.3166 -0.102279 11.7071 0.306838C12.0976 0.715966 12.0976 1.37928 11.7071 1.78841L6.70711 7.02651Z" fill="#36D7FD" />
-                                    </svg>
+                                <div class="checkBox">
+                                    <div class="boxIcon">
+                                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.8889 1H3.11111C1.94518 1 1 1.94518 1 3.11111V17.8889C1 19.0548 1.94518 20 3.11111 20H17.8889C19.0548 20 20 19.0548 20 17.8889V3.11111C20 1.94518 19.0548 1 17.8889 1Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="tickIcon">
+                                        <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5L4.3 8L12 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </template>
-                    </div>
-                </div>
-                <div class="graphs">
-                    <div class="behaviourLineGraph">
-                        <canvas class="lineGraphCanvas">
-
-                        </canvas>
-                    </div>
-                    <div class="behaviourChartGraph">
-                        <canvas class="chartGraphCanvas">
-
-                        </canvas>
                     </div>
                 </div>
             </div>

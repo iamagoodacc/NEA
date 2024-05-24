@@ -19,7 +19,7 @@
 
     .menu {
         .selectionBox {
-            top: 278.75px;
+            top: 123.5px;
         }
     }
 
@@ -169,6 +169,7 @@
                     display: flex;
                     justify-content: flex-start;
                     border-radius: 25px;
+                    position: relative;
 
                     background: var(--baseDarkBackgroundColour);
 
@@ -398,13 +399,12 @@
                                 margin-bottom: 14px;
                                 margin-left: 6px;
                                 margin-right: 5px;
+                                position: relative;
 
                                 .ellipse {
                                     position: absolute;
                                     width: 10px;
                                     height: 10px;
-                                    left: 385px;
-                                    top: 73px;
                                     border-radius: 50%;
 
                                     background: var(--baseTextColour);
@@ -507,6 +507,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
+                    overflow: hidden;
 
                     .titles {
                         width: 700px;

@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.assignmentsPage {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    position: relative;
+    display: flex;
+    justify-items: flex-start;
+
+    background: linear-gradient(180deg, var(--baseBackgroundColour) 0%, #1b2139 66.1%, #322745 100%);
+    mix-blend-mode: normal;
+
+    .menu {
+        .selectionBox {
+            top: 329px;
+        }
+    }
+
+    .pageTitle {
+        min-width: 3.4375rem;
+
+        writing-mode: vertical-lr; /* Set vertical writing mode from left to right */
+        transform: rotate(180deg); /* Rotate the text 180 degrees to make it upright */
+
+        font-family: var(--baseFontFamily);
+        font-style: var(--normal);
+        font-weight: var(--semiBoldFont);
+        font-size: 1.4375rem;
+        line-height: 3.4375rem;
+        text-align: center;
+        letter-spacing: var(--baseLetterSpacing);
+        color: var(--baseTextColour);
+    }
+
+    .page {
+        margin-right: 0.9375rem;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+
+        .topBar {
+            height: 42px;
+            width: 100%;
+
+            margin-top: 26px;
+            margin-bottom: 35px;
+            margin-right: 21px;
+
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+
+            .message {
+                flex-grow: 1;
+                height: 2.4375rem;
+
+                margin-top: 3px;
+
+                font-size: 23px;
+
+                font-family: var(--baseFontFamily);
+                font-style: var(--normal);
+                font-weight: var(--boldFont);
+
+                line-height: 1.75rem;
+                letter-spacing: var(--baseLetterSpacing);
+
+                color: var(--baseTextColour);
+            }
+
+            .options {
+                width: 90px;
+                height: 38px;
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 4px;
+
+                .settingsIcon {
+                    width: 37px;
+                    height: 37px;
+
+                    margin-top: 1px;
+                    margin-right: 15px;
+                    cursor: pointer;
+
+                    transition: transform 0.3s ease;
+                    z-index: 2;
+                }
+                .signoutIcon {
+                    width: 38px;
+                    height: 38px;
+                    cursor: pointer;
+
+                    transition: transform 0.3s ease;
+                    z-index: 2;
+                }
+
+                .signoutIcon:hover {
+                    transform: rotateY(180deg);
+                }
+
+                .settingsIcon:hover {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .pageView {
+            margin-bottom: 0.9375rem;
+
+            position: relative;
+            display: flex;
+            justify-self: flex-end;
+            justify-content: space-between;
+
+            height: 100%;
+            overflow-y: hidden;
+
+            .assignmentsView {
+                height: 100%;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                border-radius: 26px;
+                background: var(--baseDarkBackgroundColour);
+
+                .headings {
+                    width: 1226px;
+                    height: 27px;
+
+                    margin-left: 11px;
+                    margin-top: 13px;
+                    margin-right: 9px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    .titles {
+                        width: 1210px;
+                        height: 20px;
+
+                        margin-left: 8px;
+                        margin-right: 8px;
+                        margin-bottom: 6px;
+
+                        display: flex;
+                        justify-content: space-between;
+
+                        .leftTitles {
+                            display: flex;
+                            justify-content: flex-start;
+
+                            width: 383px;
+                            height: 100%;
+
+                            .dueTitle {
+                                width: 34px;
+                                height: 20px;
+
+                                margin-right: 118px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: var(--normal);
+                                font-weight: var(--semiBoldFont);
+
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: var(--baseLetterSpacing);
+
+                                color: var(--baseTextColour);
+                            }
+
+                            .subjectTitle {
+                                width: 63px;
+                                height: 20px;
+                                margin-right: 105px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: var(--normal);
+                                font-weight: var(--semiBoldFont);
+
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: var(--baseLetterSpacing);
+
+                                color: var(--baseTextColour);
+                            }
+
+                            .taskTitle {
+                                width: 63px;
+                                height: 20px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: var(--normal);
+                                font-weight: var(--semiBoldFont);
+
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: var(--baseLetterSpacing);
+
+                                color: var(--baseTextColour);
+                            }
+                        }
+
+                        .rightTitles {
+                            width: 288px;
+                            height: 100%;
+
+                            display: flex;
+                            justify-content: flex-start;
+
+                            .setTitle {
+                                width: 63px;
+                                height: 20px;
+                                margin-right: 126px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: var(--normal);
+                                font-weight: var(--semiBoldFont);
+
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: var(--baseLetterSpacing);
+
+                                color: var(--baseTextColour);
+                            }
+
+                            .completedTitle {
+                                width: 99px;
+                                height: 20px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: var(--normal);
+                                font-weight: var(--semiBoldFont);
+
+                                font-size: 16px;
+                                line-height: 20px;
+                                letter-spacing: var(--baseLetterSpacing);
+
+                                color: var(--baseTextColour);
+                            }
+                        }
+                    }
+                    .horizontalBar {
+                        width: 1226px;
+                        height: 1px;
+
+                        background: var(--baseTextColour);
+                    }
+                }
+
+                .assignments {
+                    width: 1226px;
+                    flex-grow: 1;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+
+                    margin-top: 8px;
+                    margin-left: 11px;
+                    margin-right: 9px;
+                    margin-bottom: 6px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    &::-webkit-scrollbar {
+                        width: 2.4px;
+                        background-color: var(--baseTextColour);
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background: var(--baseTextColour);
+
+                        border-radius: 50px;
+                        border-left: 1px solid var(--baseDarkBackgroundColour);
+                        border-right: 1px solid var(--baseDarkBackgroundColour);
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: var(--baseTextColour);
+                        border-radius: 50px;
+                    }
+
+                    .assignment {
+                        width: 100%;
+                        height: 57px;
+                        margin-bottom: 6px;
+                        background: var(--baseBackgroundColour);
+
+                        display: flex;
+                        justify-content: space-between;
+                        border-radius: 12px;
+
+                        .leftDetails {
+                            display: flex;
+                            justify-content: flex-start;
+                            margin-left: 8px;
+                            margin-top: 9px;
+                            margin-bottom: 12px;
+
+                            .dueDetails {
+                                width: 152px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: normal;
+                                font-weight: var(--semiBoldFont);
+                                font-size: 13px;
+                                line-height: 16px;
+
+                                letter-spacing: var(--baseLetterSpacing);
+
+                                color: var(--baseTextColour);
+                            }
+
+                            .subjectDetails {
+                                width: 152px;
+                                margin-right: 15px;
+
+                                .subjectName {
+                                    font-family: var(--baseFontFamily);
+                                    font-style: normal;
+                                    font-weight: var(--semiBoldFont);
+                                    font-size: 13px;
+                                    line-height: 16px;
+
+                                    letter-spacing: var(--baseLetterSpacing);
+
+                                    color: var(--baseTextColour);
+                                }
+
+                                .subjectClass {
+                                    font-family: var(--baseFontFamily);
+                                    font-style: normal;
+                                    font-weight: var(--mediumFont);
+                                    font-size: 11px;
+                                    line-height: 16px;
+
+                                    letter-spacing: var(--baseLetterSpacing);
+
+                                    color: var(--baseTextColour);
+                                }
+                            }
+                            .taskDetails {
+                                max-width: 602px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: normal;
+                                font-weight: var(--semiBoldFont);
+                                font-size: 13px;
+                                line-height: 16px;
+
+                                letter-spacing: var(--baseLetterSpacing);
+                                text-decoration-line: underline;
+
+                                color: var(--baseTextHighlightingColour);
+                            }
+                        }
+
+                        .rightDetails {
+                            display: flex;
+                            justify-content: flex-start;
+
+                            margin-top: 9px;
+                            margin-bottom: 12px;
+                            margin-right: 55px;
+
+                            .setDetails {
+                                width: 189px;
+                                height: 36px;
+                                margin-right: 33px;
+
+                                .setDate {
+                                    font-family: var(--baseFontFamily);
+                                    font-style: normal;
+                                    font-weight: var(--semiBoldFont);
+                                    font-size: 13px;
+                                    line-height: 16px;
+
+                                    letter-spacing: var(--baseLetterSpacing);
+
+                                    color: var(--baseTextColour);
+                                }
+
+                                .setTeacher {
+                                    font-family: var(--baseFontFamily);
+                                    font-style: normal;
+                                    font-weight: var(--mediumFont);
+                                    font-size: 11px;
+                                    line-height: 16px;
+
+                                    letter-spacing: var(--baseLetterSpacing);
+
+                                    color: var(--baseTextColour);
+                                }
+                            }
+
+                            .checkBox {
+                                position: relative;
+                                width: 21px;
+                                height: 21px;
+
+                                margin-top: 8px;
+                                margin-bottom: 9px;
+                                display: flex;
+
+                                .boxIcon {
+                                    width: 100%;
+                                    height: 100%;
+                                    stroke: var(--baseTextColour);
+                                }
+                                .tickIcon {
+                                    position: absolute;
+                                    width: 13px;
+                                    height: 9px;
+                                    left: 4px;
+                                    display: none;
+
+                                    //margin-left: 4px;
+                                    //margin-right: 4px;
+                                    //margin-top: 7px;
+                                    //margin-bottom: 5px;
+
+                                    stroke: var(--baseTextColour);
+                                }
+                            }
+                        }
+                    }
+
+                    .completedAssignment {
+                        opacity: 0.4;
+                        .rightDetails {
+                            .checkBox {
+                                .tickIcon {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
