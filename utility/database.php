@@ -1,28 +1,32 @@
 <?php
 
+require '/configuration/loadEnv.php';
 class Database
 {
-    private $server = "localhost";
-    private $username = "testUser";
-    private $password = "j2(%NJFF@a2mBxv";
-    private $database = "database";
+    private $server;
+    private $username;
+    private $password;
+    private $database;
     private $connection;
 
     public function __construct()
     {
+        $this->server = getenv('DB_KEY');
+        $this->username = getenv('DB_USERNAME');
+        $this->password = getenv('DB_PASSWORD');
+        $this->database = getenv('DB_NAME');
         $this->connection = mysqli_connect($this->server, $this->username, $this->password, $this->database);
+
+        if ($this->connection->connect_error) {
+            die("Connection failed: " . $this->connection->connect_error);
+        }
     }
 
-    /**
-     * Execute an SQL query securely with support for different types of parameters.
-     *
-     * @param string $sql The SQL query to be executed.
-     * @param array $params An optional array of parameters. Each parameter is represented as an associative array
-     *                      containing 'value' and 'type' keys. 'value' holds the actual parameter value, and 'type'
-     *                      indicates the parameter type ('i' for integer, 's' for string, 'd' for double, 'b' for blob).
-     *                      Example: [['value' => 10, 'type' => 'i'], ['value' => 'John', 'type' => 's']]
-     * @return array An array containing the fetched results, or an empty array if no results are returned.
-     */
+    public function getConnection()
+    {
+        return $this->connection;
+    }
+
 
     public function query($sql, $params = [])
     {
