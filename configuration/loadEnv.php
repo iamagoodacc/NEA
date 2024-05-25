@@ -23,4 +23,4 @@ function loadEnv($path)
     }
 }
 
-loadEnv(__DIR__ . '/configuration/config.env');
+loadEnv(__DIR__ . '/configuration/.env');
