@@ -297,7 +297,8 @@
                 }
 
                 .timetable {
-                    width: 891px;
+                    //width: 891px;
+                    flex-grow: 1;
                     height: 100%;
                     border-radius: 25px;
 
@@ -308,12 +309,14 @@
                     background: var(--baseDarkBackgroundColour);
 
                     .timeline {
-                        width: 839px;
+                        //width: 839px;
+                        flex-grow: 1;
                         height: 34px;
 
                         margin-top: 10px;
                         margin-left: 24px;
                         margin-right: 28px;
+                        position: relative;
 
                         display: flex;
                         justify-content: space-between;
@@ -362,10 +365,9 @@
 
                         .horizontalBar {
                             position: absolute;
-                            width: 838px;
-                            left: 380px;
-                            top: 36px;
-
+                            width: calc(100% - 12px);
+                            left: 6px;
+                            top: 25px;
                             border: 1px solid var(--baseTextColour);
                         }
                     }
@@ -499,6 +501,7 @@
                 .dueAssignments {
                     width: 711px;
                     height: 100%;
+                    flex-shrink: 0;
 
                     border-radius: 25px;
 
@@ -604,7 +607,7 @@
 
                     .assignments {
                         width: 700px;
-                        flex-grow: 1;
+                        //flex-grow: 1;
 
                         overflow-x: hidden;
                         overflow-y: scroll;
@@ -718,7 +721,8 @@
                 }
 
                 .recentNotices {
-                    width: 515px;
+                    //width: 515px;
+                    //flex-grow: 1;
                     height: 100%;
 
                     border-radius: 25px;
@@ -731,7 +735,8 @@
                     overflow: hidden;
 
                     .titles {
-                        width: 498px;
+                        //width: 498px;
+                        //flex-grow: 1;
                         height: 23px;
 
                         margin-left: 6px;
@@ -764,7 +769,7 @@
                     }
 
                     .notices {
-                        width: 498px;
+                        //width: 498px;
                         flex-grow: 1;
 
                         margin-left: 7px;
@@ -802,15 +807,21 @@
                         }
 
                         .notice {
-                            width: 498px;
+                            //width: 498px;
+                            //flex-grow: 1;
+                            width: 100%;
 
                             background: var(--baseBackgroundColour);
                             border-radius: 12px;
 
                             margin-bottom: 6px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
 
                             .heading {
-                                width: 481px;
+                                //width: 481px;
+                                flex-grow: 1;
                                 height: 16px;
 
                                 margin-top: 9px;
@@ -818,10 +829,10 @@
                                 margin-right: 9px;
 
                                 display: flex;
-                                justify-content: flex-start;
+                                justify-content: space-between;
 
                                 .noticeTitle {
-                                    flex-grow: 1;
+                                    //flex-grow: 1;
                                     height: 16px;
 
                                     font-family: var(--baseFontFamily);
@@ -868,7 +879,7 @@
                                 margin-right: 8px;
                                 margin-bottom: 8px;
 
-                                width: 481px;
+                                //width: 481px;
 
                                 font-family: var(--baseFontFamily);
                                 font-style: var(--normal);

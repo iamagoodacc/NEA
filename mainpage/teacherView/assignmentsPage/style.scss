@@ -149,7 +149,6 @@
                     justify-content: flex-start;
 
                     .titles {
-                        //width: 1210px;
                         flex-grow: 1;
                         height: 20px;
 
@@ -217,7 +216,7 @@
                         }
 
                         .rightTitles {
-                            width: 288px;
+                            width: 305px;
                             height: 100%;
 
                             display: flex;
@@ -226,22 +225,7 @@
                             .setTitle {
                                 width: 63px;
                                 height: 20px;
-                                margin-right: 126px;
-
-                                font-family: var(--baseFontFamily);
-                                font-style: var(--normal);
-                                font-weight: var(--semiBoldFont);
-
-                                font-size: 16px;
-                                line-height: 20px;
-                                letter-spacing: var(--baseLetterSpacing);
-
-                                color: var(--baseTextColour);
-                            }
-
-                            .completedTitle {
-                                width: 99px;
-                                height: 20px;
+                                margin-right: 242px;
 
                                 font-family: var(--baseFontFamily);
                                 font-style: var(--normal);
@@ -265,6 +249,7 @@
                 }
 
                 .assignments {
+                    //width: 100%; //1226px;
                     flex-grow: 1;
                     overflow-y: scroll;
                     overflow-x: hidden;
@@ -294,6 +279,56 @@
                     &::-webkit-scrollbar-thumb {
                         background: var(--baseTextColour);
                         border-radius: 50px;
+                    }
+
+                    .addAssignment {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 100%;
+                        height: 57px;
+                        margin-bottom: 6px;
+                        background: var(--baseBackgroundColour);
+                        border-radius: 12px;
+                        cursor: pointer;
+
+                        .descriptionCenter {
+                            display: flex;
+                            justify-content: flex-start;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+
+                            .circleIcon {
+                                svg {
+                                    width: 27px;
+                                    height: 27px;
+                                    fill: var(--baseTextHighlightingColour);
+                                }
+                                margin-right: 9px;
+                            }
+                            .addAssignmentText {
+                                margin-top: 4px;
+                                margin-bottom: 7px;
+
+                                font-family: var(--baseFontFamily);
+                                font-style: var(--normal);
+                                font-weight: var(--semiBoldFont);
+                                font-size: 16px;
+                                line-height: 16px;
+                                text-align: center;
+                                letter-spacing: var(--baseLetterSpacing);
+                                color: var(--baseTextHighlightingColour);
+                            }
+                        }
+                    }
+
+                    .addAssignment:hover {
+                        .descriptionCenter {
+                            .addAssignmentText {
+                                text-decoration: underline;
+                            }
+                        }
                     }
 
                     .assignment {
@@ -377,12 +412,11 @@
 
                             margin-top: 9px;
                             margin-bottom: 12px;
-                            margin-right: 55px;
 
                             .setDetails {
                                 width: 189px;
                                 height: 36px;
-                                margin-right: 33px;
+                                margin-right: 124px;
 
                                 .setDate {
                                     font-family: var(--baseFontFamily);
@@ -406,49 +440,6 @@
                                     letter-spacing: var(--baseLetterSpacing);
 
                                     color: var(--baseTextColour);
-                                }
-                            }
-
-                            .checkBox {
-                                position: relative;
-                                width: 21px;
-                                height: 21px;
-
-                                margin-top: 8px;
-                                margin-bottom: 9px;
-                                display: flex;
-
-                                cursor: pointer;
-
-                                .boxIcon {
-                                    width: 100%;
-                                    height: 100%;
-                                    stroke: var(--baseTextColour);
-                                }
-                                .tickIcon {
-                                    position: absolute;
-                                    width: 13px;
-                                    height: 9px;
-                                    left: 4px;
-                                    display: none;
-
-                                    //margin-left: 4px;
-                                    //margin-right: 4px;
-                                    //margin-top: 7px;
-                                    //margin-bottom: 5px;
-
-                                    stroke: var(--baseTextColour);
-                                }
-                            }
-                        }
-                    }
-
-                    .completedAssignment {
-                        opacity: 0.4;
-                        .rightDetails {
-                            .checkBox {
-                                .tickIcon {
-                                    display: block;
                                 }
                             }
                         }
