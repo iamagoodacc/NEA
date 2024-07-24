@@ -1,6 +1,8 @@
 :root {
   /* General */
   --white: #ffffff;
+  --warning: #ffc107;
+  --alert: #dc3545;
 
   /* Background */
   --baseDarkBackgroundColour: #010f17;

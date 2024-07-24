@@ -13,40 +13,50 @@ async function sha256(message) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const usernameInput = document.getElementById('usernameInput');
-    const passwordInput = document.getElementById('passwordInput');
-    const signInButton = document.getElementById('signUpButton');
-  
-    signInButton.addEventListener('click', function() {
-      const username = usernameInput.value;
-      const password = passwordInput.value;
-  
-      const formData = {
-        username: username,
-        password: sha256(password)
-      };
+  const emailInput = document.getElementById('emailInput');
+  const passwordInput = document.getElementById('passwordInput');
+  const confirmPasswordInput = document.getElementById('confirmPasswordInput')
+  const signUpButton = document.getElementById('signUpButton');
+  const hasAccountButton = document.getElementById('hasAccountButton')
 
-      console.log(formData)
-  
-      // make an AJAX request to server
-      fetch('submit.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+  signUpButton.addEventListener('click', function() {
+    var email = emailInput.value;
+    var password = passwordInput.value;
+    var confirmPassword = confirmPasswordInput.value;
+
+    if (password == confirmPassword) {
+      sha256(password).then(hashHex => {
+        password = hashHex
+
+        const formData = {
+          email: email,
+          password: password
+        };
+
+        // make an AJAX request to server
+        fetch('signUp.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+        .then(response => {
+          return response.text()
+        })
+        .then(text => {
+          // handle the text data
+          console.log(text);
+        })
+        .catch(error => {
+          // handle errors
+          console.error('There was a problem with the fetch operation:', error);
+        });
       })
-      .then(response => {
-        // handle response from server (e.g., show success or error)
-        if (response.ok) {
-          console.log('Form submitted successfully!');
-        } else {
-          console.error('Error submitting form');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    });
+    }
   });
-  
+
+  hasAccountButton.addEventListener('click', function() {
+    window.location.href = '../loginPage/page.php';
+  });
+});

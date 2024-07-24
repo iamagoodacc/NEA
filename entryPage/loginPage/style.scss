@@ -27,27 +27,17 @@
         display: flex;
         justify-content: space-between;
 
-        & > *:nth-child(1) {
-            margin-left: 226px;
-        }
-        & > *:nth-child(5) {
-            margin-right: 42px;
-        }
-
         .patternColumn {
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
 
-            & > *:nth-child(1) {
-                margin-bottom: 40px;
-            }
-
             .roundedRectangle {
-                height: 577px;
-                width: 196px;
+                //height: 577px;
+                //width: 196px;
+                flex-grow: 1;
 
                 background: rgba(217, 217, 217, 0.006); //0.01
-                border-radius: 100px;
             }
         }
 
@@ -55,9 +45,12 @@
             & > *:nth-child(1) {
                 height: 269px;
                 border-radius: 0px 0px 100px 100px;
+                margin-bottom: 20px;
             }
             & > *:nth-child(2) {
-                border-radius: 100px;
+                height: 421px;
+                border-radius: 100px 100px 0px 0px;
+                margin-top: 20px;
             }
         }
 
@@ -65,9 +58,12 @@
             & > *:nth-child(1) {
                 height: 332px;
                 border-radius: 0px 0px 100px 100px;
+                margin-bottom: 20px;
             }
             & > *:nth-child(2) {
-                border-radius: 100px;
+                height: 358px;
+                border-radius: 100px 100px 0px 0px;
+                margin-top: 20px;
             }
         }
 
@@ -75,10 +71,27 @@
             & > *:nth-child(1) {
                 height: 517px;
                 border-radius: 0px 0px 100px 100px;
+                margin-bottom: 20px;
             }
             & > *:nth-child(2) {
-                border-radius: 100px;
+                height: 173px;
+                border-radius: 100px 100px 0px 0px;
+                margin-top: 20px;
             }
+        }
+
+        & > *:nth-child(1) {
+            margin-left: 226px;
+            margin-right: 36px;
+        }
+        & > *:nth-child(5) {
+            margin-right: 42px;
+            margin-left: 36px;
+        }
+
+        & > *:nth-child(n):not(:first-child):not(:last-child) {
+            margin-left: 36px;
+            margin-right: 36px;
         }
     }
 
@@ -93,6 +106,7 @@
         .loginContainer {
             display: flex;
             flex-direction: column;
+            position: relative;
 
             .loginTitle {
                 width: 181px;
@@ -157,7 +171,7 @@
                     margin-top: 15px;
                     margin-bottom: 10px;
 
-                    .usernameContainer {
+                    .emailContainer {
                         width: 100%;
                         height: 37px;
                         margin-bottom: 20px;
@@ -168,7 +182,7 @@
                         background: rgba(255, 255, 255, 0.05);
                         border-radius: 25px;
 
-                        .username {
+                        .email {
                             margin-left: 11px;
                             margin-right: 6px;
                             flex-grow: 1;
@@ -190,8 +204,8 @@
                             z-index: 6;
                         }
 
-                        .username:focus,
-                        .username::placeholder,
+                        .email:focus,
+                        .email::placeholder,
                         .password:not(:placeholder-shown) {
                             font-weight: var(--semiBoldFont);
                             color: var(--baseTextColour);
@@ -282,7 +296,7 @@
                             text-align: left;
                             letter-spacing: var(--baseLetterSpacing);
                             color: var(--baseTextColour);
-                            text-decoration-line: underline;
+                            cursor: pointer;
                         }
                         .createAccount {
                             margin-right: 8px;
@@ -296,7 +310,14 @@
                             text-align: right;
                             letter-spacing: var(--baseLetterSpacing);
                             color: var(--baseTextColour);
-                            text-decoration-line: underline;
+                            cursor: pointer;
+                        }
+
+                        .forgottenPassword:hover {
+                            text-decoration: underline;
+                        }
+                        .createAccount:hover {
+                            text-decoration: underline;
                         }
                     }
                 }
@@ -333,6 +354,32 @@
                     &:hover {
                         color: rgba(255, 255, 255, 1);
                     }
+                }
+            }
+
+            .errorMessages {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                margin-top: auto;
+                top: calc(100% + 15px);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                .errorMessage {
+                    width: 100%;
+
+                    font-family: var(--baseFontFamily);
+                    font-style: var(--normal);
+                    font-weight: var(--semiBoldFont);
+
+                    font-size: 12px;
+                    line-height: 13px;
+                    text-align: center;
+                    letter-spacing: var(--baseLetterSpacing);
+                    color: var(--alert);
+                    margin-bottom: 5px;
                 }
             }
         }

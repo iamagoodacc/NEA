@@ -54,8 +54,8 @@
                 <div class="contents">
                     <div class="horizontalBar"></div>
                     <div class="details">
-                        <div class="usernameContainer">
-                            <input type="text" id="usernameInput" class="username" placeholder="USERNAME">
+                        <div class="emailContainer">
+                            <input type="email" id="emailInput" class="email" placeholder="EMAIL">
                             <div class="userIcon">
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.5 7.79141C9.53321 7.79141 10.5241 7.38097 11.2547 6.65038C11.9853 5.9198 12.3957 4.92891 12.3957 3.8957C12.3957 2.8625 11.9853 1.87161 11.2547 1.14103C10.5241 0.410439 9.53321 0 8.5 0C7.46679 0 6.47591 0.410439 5.74532 1.14103C5.01473 1.87161 4.6043 2.8625 4.6043 3.8957C4.6043 4.92891 5.01473 5.9198 5.74532 6.65038C6.47591 7.38097 7.46679 7.79141 8.5 7.79141ZM8.5 9.503C3.32041 9.503 0 12.3613 0 13.753V16.3517H17V13.753C17 12.07 13.8565 9.503 8.5 9.503Z" />
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="confirmPasswordContainer">
-                            <input type="password" id="passwordInput" class="password" placeholder="CONFIRM PASSWORD">
+                            <input type="password" id="confirmPasswordInput" class="password" placeholder="CONFIRM PASSWORD">
                             <div class="lockIcon">
                                 <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.36667 11.8611V13.75M3.7625 7.63831C4.1966 7.61111 4.73176 7.61111 5.42 7.61111H11.3133C12.0016 7.61111 12.5368 7.61111 12.9708 7.63831M3.7625 7.63831C3.22076 7.67222 2.83641 7.74853 2.50835 7.91994C1.98855 8.19157 1.56594 8.62497 1.30109 9.15811C1 9.76425 1 10.5576 1 12.1444V13.4667C1 15.0535 1 15.8469 1.30109 16.453C1.56594 16.9861 1.98855 17.4195 2.50835 17.6912C3.09928 18 3.87285 18 5.42 18H11.3133C12.8605 18 13.634 18 14.225 17.6912C14.7448 17.4195 15.1674 16.9861 15.4322 16.453C15.7333 15.8469 15.7333 15.0535 15.7333 13.4667V12.1444C15.7333 10.5576 15.7333 9.76425 15.4322 9.15811C15.1674 8.62497 14.7448 8.19157 14.225 7.91994C13.8969 7.74853 13.5126 7.67222 12.9708 7.63831M3.7625 7.63831V5.72222C3.7625 3.11421 5.82386 1 8.36667 1C10.9095 1 12.9708 3.11421 12.9708 5.72222V7.63831" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                         <div class="extras">
-                            <div class="existingAccount">Already have an account? Sign in!</div>
+                            <div id="hasAccountButton" class="existingAccount">Already have an account? Sign in!</div>
                         </div>
                     </div>
                 </div>
