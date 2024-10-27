@@ -8,11 +8,45 @@ for (i=0; i < 15; i++) {
     recentBehaviourEvents.appendChild(newBehaviourEvent);
 }
 
-document.querySelectorAll(".dropDownIcon").forEach(function(viewMoreToggle) {
-    $(viewMoreToggle).click(function() {   
+const studentTemplate = document.getElementById("studentTemplate")
+const studentList = studentTemplate.parentElement
+for (i=0; i < 21; i++) {
+    const newStudentContents = document.importNode(studentTemplate.content, true);
+    const newStudent = document.createElement("div")
+    newStudent.appendChild(newStudentContents)
+    newStudent.classList.add("student")
+    studentList.appendChild(newStudent);
+}
+
+// document.querySelectorAll(".dropDownIcon").forEach(function(viewMoreToggle) {
+//     $(viewMoreToggle).click(function() {   
+//         const description = viewMoreToggle.parentElement 
+//         const expanded = description.querySelector(".text") == null;
+
+//         if (!expanded) {
+//             viewMoreToggle.style.transform = "rotate(180deg)";
+//             const textBox = description.querySelector(".text")
+//             textBox.classList.remove("text")
+//             textBox.classList.add("expandedText")
+//         } else if (expanded) {
+//             viewMoreToggle.style.transform = "rotate(0deg)";
+//             const textBox = description.querySelector(".expandedText")
+//             textBox.classList.remove("expandedText")
+//             textBox.classList.add("text")
+//         }
+//     }); 
+// });
+
+const eventsContainer = document.getElementById("events")
+eventsContainer.addEventListener('click', function(event) {
+    const viewMoreToggle = event.target.closest('.dropDownIcon');
+    if (viewMoreToggle && eventsContainer.contains(viewMoreToggle)) {
+        
+        console.log('Item clicked:', viewMoreToggle)
+
         const description = viewMoreToggle.parentElement 
         const expanded = description.querySelector(".text") == null;
-
+      
         if (!expanded) {
             viewMoreToggle.style.transform = "rotate(180deg)";
             const textBox = description.querySelector(".text")
@@ -24,7 +58,15 @@ document.querySelectorAll(".dropDownIcon").forEach(function(viewMoreToggle) {
             textBox.classList.remove("expandedText")
             textBox.classList.add("text")
         }
-    }); 
+    }
+});
+
+const studentContainer = document.getElementById("studentList")
+studentContainer.addEventListener('click', function(event) {
+    const studentEntry = event.target.closest('.student');
+    if (studentEntry && studentContainer.contains(studentEntry)) {
+      console.log('Item clicked:', studentEntry)
+    }
 });
 
 function generateData() {

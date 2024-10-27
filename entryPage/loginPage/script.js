@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     forgottenPasswordButton.addEventListener('click', function() {
-      //window.location.href = '../signUpPage/page.php';
+      window.location.href = '../forgottenPasswordPage/page.php';
     });
   });
   

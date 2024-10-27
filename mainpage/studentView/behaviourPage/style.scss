@@ -403,35 +403,32 @@
                 //width: 862px;
                 width: 100%;
                 height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
 
                 border-radius: 25px;
 
                 .behaviourLineGraph {
                     width: 100%;
-                    height: 296px;
+                    //height: 296px;
+                    flex-grow: 1;
+                    flex-basis: 0;
 
                     background-color: var(--baseDarkBackgroundColour);
                     border-radius: 25px;
 
                     margin-bottom: 20px;
-
-                    .lineGraphCanvas {
-                        width: 100%;
-                        height: 100%;
-                    }
                 }
 
                 .behaviourChartGraph {
                     width: 100%;
-                    height: 290px;
+                    //height: 290px;
+                    flex-grow: 1;
+                    flex-basis: 0;
 
                     background-color: var(--baseDarkBackgroundColour);
                     border-radius: 25px;
-
-                    .chartGraphCanvas {
-                        width: 100%;
-                        height: 100%;
-                    }
                 }
             }
         }
